@@ -20,8 +20,7 @@ print(projectTable)
 
 def searchIssueWithKey(key):
     today = time.strftime("%Y-%m-%d", time.localtime(time.time()))
-    # issues1 = jira.search_issues('project = ' + key + ' AND created >= ' + today + ' AND reporter = currentUser()')
-    issues1 = jira.search_issues('project = ' + key + ' AND created >= ' + today + ' AND reporter = 贾国强（测试）')
+    issues1 = jira.search_issues('project = ' + key + ' AND created >= ' + today + ' AND reporter = currentUser()')
     print('\r')
     print("当前用户今天所提bug总数：", issues1.total)
     table1 = PrettyTable(["Key", " 状态 ", "处理人", "描述"])
